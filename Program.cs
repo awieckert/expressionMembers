@@ -65,6 +65,22 @@ namespace expressionMembers
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            List<string> predators = new List<string>(){
+              "AngryBird",
+              "SMallBird",
+              "BigBird"
+            };
+
+            List<string> prey = new List<string>(){
+              "SmallerBugs",
+              "Even Smaller Bugs",
+              "The smallest bugs"
+            };
+
+            Bug mrBug = new Bug("Bugman", "Awesome Bug", predators, prey){};
+            Console.WriteLine($"{mrBug.PreyListExpress}");
+            Console.WriteLine($"{mrBug.PredatorListExpres}");
+            Console.WriteLine($"{mrBug.Eat("The smallest bugs")}");
         }
     }
 }
